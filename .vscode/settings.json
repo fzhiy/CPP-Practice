@@ -31,6 +31,11 @@
         "vector": "c",
         "iterator": "c",
         "memory_resource": "c",
-        "iostream": "c"
-    }
+        "iostream": "c",
+        "iterator.h": "c",
+        "algobase.h": "c",
+        "construct.h": "c",
+        "unintialized.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

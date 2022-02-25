@@ -3,7 +3,7 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-02-24 16:10:23
+ * @LastEditTime: 2022-02-25 13:22:59
  */
 
 #ifndef MYTINYSTL_UTIL_H_
@@ -137,13 +137,156 @@ namespace mystl {
         pair(pair&& rhs) = default;
 
         // implicit constructible for other type 
-        
+        template <class Other1, class Other2,
+            typename std::enable_if<
+            std::is_constructible<Tp1, Other1>::value &&
+            std::is_constructible<Tp2, Other2>::value &&
+            std::is_convertible<Other1&&, Tp1>::value &&
+            std::is_convertible<Other2&&, Tp2>::value, int>::type = 0>
+            constexpr pair(Other1&& a, Other2&& b) 
+            : first(mystl::forward<Other1>(1)), second(mystl::forward<Other2>(b)) {}
+
+        // explicit constructible for other type
+        template <class Other1, class Other2>
+            typename std::enable_if<
+            std::is_constructible<Tp1, Other1>::value &&
+            std::is_constructible<Tp2, Other2>::value &&
+            (!std::is_convertible<Other1, Tp1>::value ||
+            !std::is_convertible<Other2, Tp2>::value), int>::type = 0>
+            explicit constexpr pair(Other1&& a, Other2&& b) 
+            : first(mystl::forward<Other1>(a)), second(mystl::forward<Other2>(b)) {}
+
+        // implicit constructible for other type
+        template <class Other1, class Other2,
+            typename std::enable_if<
+            std::is_constructible<Tp1, const Other1&>::value &&
+            std::is_constructible<Tp2, const Other2&>::value &&
+            std::is_convertible<const Other1&, Tp1>::value &&
+            std::is_convertible<const Other2&, Tp2>::value, int>::type = 0>
+            constexpr pair(const pair<Other1, Other2>& other)
+            : first(other.first), second(other.second) {}
+
+        // explicit constructible for other pair
+        template <class Other1, class Other2,
+            typename std::enable_if<
+            std::is_constructible<Tp1, const Other1&>::value &&
+            std::is_constructible<Tp2, const Other2&>::value &&
+            (!std::is_convertible<const Other1&, Tp1>::value ||
+            !std::is_convertible<const Other2&, Tp2>::value), int>::type = 0>
+            explicit constexpr pair(const pair<Other1, Other2>& other) 
+            : first(other.first), second(other.second) {}
+
+        // implicit constructible for other pair
+        template <class Other1, class Other2,
+            typename std::enable_if<
+            std::is_constructible<Tp1, Other1>::value &&
+            std::is_constructible<Tp2, Other2>::value &&
+            std::is_convertible<Other1, Tp1>::value &&
+            std::is_convertible<Other2, Tp2>::value, int>::type = 0>
+            constexpr pair(pair<Other1, Other2>&& other)
+            : first(mystl::forward<Other1>(other.first)),
+            second(mystl::forward<Other2>(other.second)) {}
+
+        // explicit constructible for other pair
+        template <class Other1, class Other2,
+            typename std::enable_if<
+            std::is_constructible<Tp1, Other1>::value &&
+            std::is_constructible<Tp2, Other2>::value &&
+            (!std::is_convertible<Other1, Tp1>::value ||
+            std::is_convertible<Other2, Tp2>::value), int>::type = 0>
+            explicit constexpr pair(pair<Other1, Other2>&& other)
+            : first(mystl::forward<Other1>(other.first)), 
+            second(mystl::forward<Other2>(other.second)) {}
+
+        // copy assign for this pair
+        pair& operator=(const pair& rhs) {
+            if (this ！= &rhs) {
+                first = rhs.first;
+                second = rhs.second;
+            }
+            return *this;
+        }
+
+        // move assign for this pair
+        pair& operator=(pair&& rhs) {
+            if (this != &rhs) {
+                first = mystl::move(rhs.first);
+                second = mystl::move(rhs.second);
+            }
+            return *this;
+        }
+
+        // copy assign for other pair
+        template <class Other1, class Other2>
+        pair& operator=(const pair<Other1, Other2>& other) {
+            first = other.first;
+            second = other.second;
+            return *this;
+        }
+
+        // move assign for other pair
+        template <class Other1, class Other2>
+        pair& operator=(pair<Other1, Other2>&& other) {
+            first = mystl::forward<Other1>(other.first);
+            second = mystl::forward<Other2>(other.second);
+            return *this;
+        }
+
+        ~pair() = default; // TODO: default 虚构函数？
+
+        void swap(pair& other) {
+            if (this != &other) {
+                mystl::swap(first, other.first);
+                mystl::swap(second, other.second);
+            }
+        }
+
     };
 
+    // 重载比较操作符
+    template <class Tp1, class Tp2>
+    bool operator==(const pair<Tp1, Tp2>& lhs, const pair<Tp1, Tp2>& rhs) {
+        return lhs.first == rhs.first && lhs.second == rhs.second;
+    }
+
+    template <class Tp1, class Tp2> 
+    bool operator<(const pair<Tp1, Tp2>& lhs, const pair<Tp1, Tp2>& rhs) {
+        return lhs.first < rhs.first || (lhs.first == rhs.second && lhs.second < rhs.second);
+    }
+
+    template <class Tp1, class Tp2>
+    bool operator!=(const pair<Tp1, Tp2>&lhs, const pair<Tp1, Tp2>& rhs) {
+        return !(lhs == rhs);
+    }
+
+    template <class Tp1, class Tp2>
+    bool operator>(const pair<Tp1, Tp2>& lhs, const pair<Tp1, Tp2>& rhs) {
+        return rhs < lhs;
+    }
+
+    template <class Tp1, class Tp2>
+    bool operator<=(const pair<Tp1, Tp2>&lhs, const pair<Tp1, Tp2>& rhs) {
+        return !(rhs < lhs);
+    }
+
+    template <class Tp1, class Tp2>
+    bool operator>=(const pair<Tp1, Tp2>&lhs, const pair<Tp1, Tp2>& rhs) {
+        return !(lhs < rhs);
+    }
+
+    // 重载mystl的swap
+    template <class Tp1, class Tp2>
+    void swap(pair<Tp1, Tp2>& lhs, pair<Tp1, Tp2>& rhs) {
+        lhs.swap(rhs);
+    }
+
+    // 全局函数，让两个数据成为一个pair
+    template <class Tp1, class Tp2>
+    pair<Tp1, Tp2> make_pair(Tp1&& first, Tp2&& second) {
+        return pair<Tp1, Tp2>(mystl::forward<Tp1>(first), mystl::forward<Tp2>(second));
+    }
 
 }
-
-
 
 
 #endif // !MYTINYSTL_UTIL_H_
