@@ -35,7 +35,8 @@
         "iterator.h": "c",
         "algobase.h": "c",
         "construct.h": "c",
-        "unintialized.h": "c"
+        "unintialized.h": "c",
+        "string": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
