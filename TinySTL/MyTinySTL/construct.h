@@ -3,7 +3,7 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-02-25 15:24:27
+ * @LastEditTime: 2022-02-26 14:03:21
  */
 
 #ifndef MYTINYSTL_CONSTRUCT_H_
@@ -52,11 +52,11 @@ namespace mystl {
 
     // destroy 将对象析构
 
-    template <class T>
+    template <class Tp>
     void destroy_one(Tp*, std::true_type) {}
 
-    template <class T>
-    void destroy_one(T* pointer, std::false_type) {
+    template <class Tp>
+    void destroy_one(Tp* pointer, std::false_type) {
         if (pointer != nullptr) {
             pointer->~Tp();
         }

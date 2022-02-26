@@ -3,7 +3,7 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-02-25 18:55:42
+ * @LastEditTime: 2022-02-26 14:11:38
  */
 
 #ifndef MYTINYSTL_MEMORY_H_
@@ -97,7 +97,7 @@ namespace mystl {
     private:
         void allocate_buffer();
         void initialize_buffer(const T&, std::true_type) {}
-        void initialize_buffer(const T&, std::false_type) {
+        void initialize_buffer(const T& value, std::false_type) {
             mystl::uninitialized_fill_n(buffer, len, value);
         }
     
@@ -153,7 +153,7 @@ namespace mystl {
     
     public:
         // 构造、复制、析构函数
-        explicit auto_ptr(T* p == nullptr) : m_ptr(p) {}
+        explicit auto_ptr(T* p = nullptr) : m_ptr(p) {}
         auto_ptr(auto_ptr& rhs) : m_ptr(rhs.release()) {}
         template<class U>
         auto_ptr(auto_ptr<U>& rhs) : m_ptr(rhs.release()) {}

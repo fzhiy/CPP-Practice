@@ -1,0 +1,5 @@
+/mnt/d/_Book&Course/_Codes/CPP-Practice/TinySTL/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/_Book&Course/_Codes/CPP-Practice/TinySTL/build/CMakeFiles/edit_cache.dir
+/mnt/d/_Book&Course/_Codes/CPP-Practice/TinySTL/build/Test/CMakeFiles/edit_cache.dir
+/mnt/d/_Book&Course/_Codes/CPP-Practice/TinySTL/build/Test/CMakeFiles/rebuild_cache.dir
+/mnt/d/_Book&Course/_Codes/CPP-Practice/TinySTL/build/Test/CMakeFiles/stltest.dir

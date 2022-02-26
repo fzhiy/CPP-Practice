@@ -3,7 +3,7 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-02-25 13:22:59
+ * @LastEditTime: 2022-02-26 15:10:35
  */
 
 #ifndef MYTINYSTL_UTIL_H_
@@ -77,13 +77,13 @@ namespace mystl {
     void swap(Tp& lhs, Tp& rhs) {
         auto tmp(mystl::move(lhs));
         lhs = mystl::move(rhs);
-        rhs = mystl:move(tmp);
+        rhs = mystl::move(tmp);
     }
 
     template<class ForwardIter1, class ForwardIter2>
     ForwardIter2 swap_range(ForwardIter1 first1, ForwardIter1 last1, ForwardIter2 first2) {
-        for (; first != last1; ++first1, (void) ++first2) {
-            mystl::swap(*first, *first2);
+        for (; first1 != last1; ++first1, (void) ++first2) {
+            mystl::swap(*first1, *first2);
         }
         return first2;
     } 
@@ -144,17 +144,18 @@ namespace mystl {
             std::is_convertible<Other1&&, Tp1>::value &&
             std::is_convertible<Other2&&, Tp2>::value, int>::type = 0>
             constexpr pair(Other1&& a, Other2&& b) 
-            : first(mystl::forward<Other1>(1)), second(mystl::forward<Other2>(b)) {}
+            : first(mystl::forward<Other1>(a)), second(mystl::forward<Other2>(b)) {}
 
         // explicit constructible for other type
-        template <class Other1, class Other2>
+        template <class Other1, class Other2,
             typename std::enable_if<
             std::is_constructible<Tp1, Other1>::value &&
             std::is_constructible<Tp2, Other2>::value &&
             (!std::is_convertible<Other1, Tp1>::value ||
             !std::is_convertible<Other2, Tp2>::value), int>::type = 0>
-            explicit constexpr pair(Other1&& a, Other2&& b) 
-            : first(mystl::forward<Other1>(a)), second(mystl::forward<Other2>(b)) {}
+            explicit constexpr pair(Other1&& a, Other2&& b)
+            : first(mystl::forward<Other1>(a)),
+            second(mystl::forward<Other2>(b)) {}
 
         // implicit constructible for other type
         template <class Other1, class Other2,
@@ -200,7 +201,7 @@ namespace mystl {
 
         // copy assign for this pair
         pair& operator=(const pair& rhs) {
-            if (this ！= &rhs) {
+            if (this != &rhs) {
                 first = rhs.first;
                 second = rhs.second;
             }

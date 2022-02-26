@@ -3,7 +3,7 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-02-25 15:42:20
+ * @LastEditTime: 2022-02-26 14:05:10
  */
 
 #ifndef MYTINYSTL_ALLOCATOR_H_
@@ -55,12 +55,12 @@ namespace mystl {
     };
 
     template <class T>
-    T* allocate<T>::allocate() {
+    T* allocator<T>::allocate() {
         return static_cast<T*>(::operator new(sizeof(T)));
     }
 
     template <class T>
-    T* allocate<T>::allocate(size_type n) {
+    T* allocator<T>::allocate(size_type n) {
         if (n == 0) {
             return nullptr;
         }

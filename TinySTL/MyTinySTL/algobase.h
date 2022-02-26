@@ -3,7 +3,7 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-02-25 21:40:00
+ * @LastEditTime: 2022-02-26 15:18:13
  */
 
 #ifndef MYTINY_ALGOBASE_H_
@@ -47,8 +47,8 @@ const T& max(const T& lhs, const T& rhs) {
 
 // 重载版本使用函数对象 comp 代替比较操作
 template <class T, class Compare>
-const& max(const T& lhs, const T& rhs, Compare comp) {
-    return comp(lhs, rhs) ? rhs : lhs;
+const T& max(const T& lhs, const T& rhs, Compare comp) {
+    return comp(lhs, rhs) ? rhs : lhs;    
 }
 
 /************************************************************************************
@@ -222,7 +222,7 @@ template <class InputIter, class OutputIter>
 OutputIter
 unchecked_move_cat(InputIter first, InputIter last, OutputIter result,
     mystl::input_iterator_tag) {
-        for (; first != last; ++first; ++result) {
+        for (; first != last; ++first, ++result) {
             *result = mystl::move(*first);
         }
         return result;
@@ -381,7 +381,7 @@ OutputIter fill_n(OutputIter first, Size n, const T& value) {
  *******************************************************************************************/
 template <class ForwardIter, class T>
 void fill_cat(ForwardIter first, ForwardIter last, const T& value, 
-    mystl::forward_traversal_tag) {
+    mystl::forward_iterator_tag) {
         for (; first != last; ++first) {
             *first = value;
         }
@@ -451,7 +451,7 @@ bool lexicographical_compare(const unsigned char* first1,
  * 平行比较两个序列，找到第一处失配的元素，返回一对迭代器，分别指向两个序列中失配的元素
  **********************************************************************************************/
 template <class InputIter1, class InputIter2>
-mystl::pairM<InputIter1, InputIter2>
+mystl::pair<InputIter1, InputIter2>
 mismatch(InputIter1 first1, InputIter1 last1, InputIter2 first2) {
     while (first1 != last1 && *first1 == *first2) {
         ++ first1;

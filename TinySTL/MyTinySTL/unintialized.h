@@ -3,7 +3,7 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-02-25 16:35:29
+ * @LastEditTime: 2022-02-26 15:04:36
  */
 
 #ifndef MYTINYSTL_UNINITIALIZED_H_
@@ -53,9 +53,10 @@ namespace mystl {
 
     template <class InputIter, class ForwardIter>
     ForwardIter uninitialized_copy(InputIter first, InputIter last, ForwardIter result) {
-        return mystl::unchecked_uninit_copy(first, last, result,
-                        std::is_trivilly_copy_assignable<
-                        typename iterator_traits<ForwardIter>::value_type>{});
+        return mystl::unchecked_uninit_copy(first, last, result, 
+                                        std::is_trivially_copy_assignable<
+                                        typename iterator_traits<ForwardIter>::
+                                        value_type>{});
     }
 
     /***************************************************************************************
@@ -84,7 +85,7 @@ namespace mystl {
 
     template <class InputIter, class Size, class ForwardIter>
     ForwardIter uninitialized_copy_n(InputIter first, Size n, ForwardIter result) {
-        return mystl::uncheck_uninit_copy_n(first, n, result, 
+        return mystl::unchecked_uninit_copy_n(first, n, result, 
                 std::is_trivially_copy_assignable<
                 typename iterator_traits<InputIter>::value_type>{});
     }
@@ -157,7 +158,7 @@ namespace mystl {
      **************************************************************************************/
     template <class InputIter, class ForwardIter>
     ForwardIter unchecked_uninit_move(InputIter first, InputIter last, ForwardIter result, std::true_type) {
-        return mystl:move(first, last, result);
+        return mystl::move(first, last, result);
     }
 
     template <class InputIter, class ForwardIter>

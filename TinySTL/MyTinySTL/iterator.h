@@ -3,7 +3,7 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-02-25 15:05:52
+ * @LastEditTime: 2022-02-26 14:56:35
  */
 
 #ifndef MYTINYSTL_ITERATOR_H_
@@ -73,8 +73,8 @@ namespace mystl {
     template <class Iterator>
     struct iterator_traits_helper<Iterator, true> 
         : public iterator_traits_impl<Iterator, 
-        std::is_convertible<typename Iterator::iterator_category, input_iterator_tag> ||
-        std::is_convertible<typename Iterator::iterator_category, output_iterator_tag> {};
+        std::is_convertible<typename Iterator::iterator_category, input_iterator_tag>::value ||
+        std::is_convertible<typename Iterator::iterator_category, output_iterator_tag>::value> {};
     
     // 萃取迭代器的特性
     template <class Iterator>
@@ -100,7 +100,7 @@ namespace mystl {
         typedef ptrdiff_t                       difference_type;
     };
 
-    template <class T, class U, bool = has_iterator_cat<iterator_traits<T>>::value
+    template <class T, class U, bool = has_iterator_cat<iterator_traits<T>>::value>
     struct has_iterator_cat_of 
         : public m_bool_constant<std::is_convertible<
         typename iterator_traits<T>::iterator_category, U>::value> {};
@@ -122,7 +122,7 @@ namespace mystl {
     struct is_bidirectional_iterator : public has_iterator_cat_of<Iter, bidirectional_iterator_tag> {};
 
     template <class Iter>
-    struct is_random_access_iterator : public has_iterator_cat_of<Iter, is_random_access_iterator_tag> {};
+    struct is_random_access_iterator : public has_iterator_cat_of<Iter, random_access_iterator_tag> {};
 
     template <class Iterator>
     struct is_iterator : 
@@ -175,7 +175,7 @@ namespace mystl {
     template <class InputIterator>
     typename iterator_traits<InputIterator>::difference_type
     distance(InputIterator first, InputIterator last) {
-        return distance_dispatch(first, last, iterator_catogery(first));
+        return distance_dispatch(first, last, iterator_category(first));
     }
 
     // 以下函数用于让迭代器前进n个距离

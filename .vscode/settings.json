@@ -36,7 +36,8 @@
         "algobase.h": "c",
         "construct.h": "c",
         "unintialized.h": "c",
-        "string": "c"
+        "string": "c",
+        "initializer_list": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }

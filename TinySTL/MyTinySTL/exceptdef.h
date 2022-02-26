@@ -3,11 +3,11 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-02-25 15:11:10
+ * @LastEditTime: 2022-02-26 13:55:26
  */
 
 #ifndef MYTINYSTL_EXCEPTDEF_H_
-#ifndef MYTINYSTL_EXCEPTDEF_H_
+#define MYTINYSTL_EXCEPTDEF_H_
 
 #include <stdexcept>
 #include <cassert>
