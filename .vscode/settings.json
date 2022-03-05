@@ -37,7 +37,8 @@
         "construct.h": "c",
         "unintialized.h": "c",
         "string": "c",
-        "initializer_list": "c"
+        "initializer_list": "c",
+        "memory.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
