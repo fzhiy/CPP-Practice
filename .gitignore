@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# CPP_test Directory
+CPP_test
