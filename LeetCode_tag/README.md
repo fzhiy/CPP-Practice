@@ -14,30 +14,30 @@
 
 ## 链表
 
-| 题目                                                         | 难度 | 题解文件                                                     | 方法                       |
-| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | -------------------------- |
-| [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/) | 简单 | [简单-206.反转链表.md](链表/单链表/简单-206.反转链表.md)     | 迭代/递归                  |
-| [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/) | 简单 | [简单-141. 环形链表.md](链表/单链表/简单-141. 环形链表.md)   | 快慢指针                   |
-| [83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/) | 简单 | [简单-83. 删除排序链表中的重复元素.md](链表/单链表/简单-83. 删除排序链表中的重复元素.md) |                            |
-| [234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/) | 简单 | [简单-234. 回文链表.md](链表/单链表/简单-234. 回文链表.md)   | 快慢指针+反转链表          |
-| [203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/) | 简单 | [简单-203. 移除链表元素.md](链表/单链表/简单-203. 移除链表元素.md) |                            |
-| [237. 删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/) | 简单 | [简单-237. 删除链表中的节点.md](链表/单链表/简单-237. 删除链表中的节点.md) |                            |
-| [876. 链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/) | 简单 | [简单-876. 链表的中间结点.md](链表/单链表/简单-876. 链表的中间结点.md) | 快慢指针                   |
-| [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/) | 中等 | [中等-92. 反转链表 II.md](链表/单链表/中等-92. 反转链表 II.md) | 头插法                     |
-| [143. 重排链表](https://leetcode-cn.com/problems/reorder-list/) | 中等 | [中等-143. 重排链表.md](链表/单链表/中等-143. 重排链表.md)   | 快慢指针+反转链表+合并链表 |
-| [82. 删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/) | 中等 | [中等-82. 删除排序链表中的重复元素 II.md](链表/单链表/中等-82. 删除排序链表中的重复元素 II.md) |                            |
-| [148. 排序链表](https://leetcode-cn.com/problems/sort-list/) | 中等 |                                                              |                            |
-| [86. 分隔链表](https://leetcode-cn.com/problems/partition-list/) | 中等 |                                                              |                            |
-| [61. 旋转链表](https://leetcode-cn.com/problems/rotate-list/) | 中等 |                                                              |                            |
-| [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/) | 中等 |                                                              |                            |
-| [147. 对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/) | 中等 |                                                              |                            |
-| [138. 复制带随机指针的链表](https://leetcode-cn.com/problems/copy-list-with-random-pointer/) | 中等 |                                                              |                            |
-| [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/) | 中等 |                                                              |                            |
-| [328. 奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/) | 中等 |                                                              |                            |
-| [707. 设计链表](https://leetcode-cn.com/problems/design-linked-list/) | 中等 |                                                              |                            |
-| [109. 有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/) | 中等 |                                                              |                            |
-| [430. 扁平化多级双向链表](https://leetcode-cn.com/problems/flatten-a-multilevel-doubly-linked-list/) | 中等 |                                                              |                            |
-| [725. 分隔链表](https://leetcode-cn.com/problems/split-linked-list-in-parts/) | 中等 |                                                              |                            |
+| 题目                                                         | 难度 | 题解文件                                                     | 方法                                    |
+| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | --------------------------------------- |
+| [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/) | 简单 | [简单-206.反转链表.md](链表/单链表/简单-206.反转链表.md)     | 迭代/递归                               |
+| [141. 环形链表](https://leetcode-cn.com/problems/linked-list-cycle/) | 简单 | [简单-141. 环形链表.md](链表/单链表/简单-141. 环形链表.md)   | 快慢指针                                |
+| [83. 删除排序链表中的重复元素](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/) | 简单 | [简单-83. 删除排序链表中的重复元素.md](链表/单链表/简单-83. 删除排序链表中的重复元素.md) |                                         |
+| [234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/) | 简单 | [简单-234. 回文链表.md](链表/单链表/简单-234. 回文链表.md)   | 快慢指针+反转链表                       |
+| [203. 移除链表元素](https://leetcode-cn.com/problems/remove-linked-list-elements/) | 简单 | [简单-203. 移除链表元素.md](链表/单链表/简单-203. 移除链表元素.md) |                                         |
+| [237. 删除链表中的节点](https://leetcode-cn.com/problems/delete-node-in-a-linked-list/) | 简单 | [简单-237. 删除链表中的节点.md](链表/单链表/简单-237. 删除链表中的节点.md) |                                         |
+| [876. 链表的中间结点](https://leetcode-cn.com/problems/middle-of-the-linked-list/) | 简单 | [简单-876. 链表的中间结点.md](链表/单链表/简单-876. 链表的中间结点.md) | 快慢指针                                |
+| [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/) | 中等 | [中等-92. 反转链表 II.md](链表/单链表/中等-92. 反转链表 II.md) | 头插法                                  |
+| [143. 重排链表](https://leetcode-cn.com/problems/reorder-list/) | 中等 | [中等-143. 重排链表.md](链表/单链表/中等-143. 重排链表.md)   | 快慢指针+反转链表+合并链表              |
+| [82. 删除排序链表中的重复元素 II](https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/) | 中等 | [中等-82. 删除排序链表中的重复元素 II.md](链表/单链表/中等-82. 删除排序链表中的重复元素 II.md) | 删除节点（2种方法）                     |
+| [148. 排序链表](https://leetcode-cn.com/problems/sort-list/) | 中等 | [中等-148. 排序链表.md](链表/单链表/中等-148. 排序链表.md)   | 归并排序（迭代（**切割链表**） + 递归） |
+| [86. 分隔链表](https://leetcode-cn.com/problems/partition-list/) | 中等 | [中等-86. 分隔链表.md](链表/单链表/中等-86. 分隔链表.md)     | 合并链表                                |
+| [61. 旋转链表](https://leetcode-cn.com/problems/rotate-list/) | 中等 | [中等-61. 旋转链表.md](链表/单链表/中等-61. 旋转链表.md)     | 切割链表                                |
+| [142. 环形链表 II](https://leetcode-cn.com/problems/linked-list-cycle-ii/) | 中等 | [中等-142. 环形链表 II.md](链表/单链表/中等-142. 环形链表 II.md) | 快慢指针                                |
+| [147. 对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/) | 中等 | [中等-147. 对链表进行插入排序.md](链表/单链表/中等-147. 对链表进行插入排序.md) | 头插法                                  |
+| [138. 复制带随机指针的链表](https://leetcode-cn.com/problems/copy-list-with-random-pointer/) | 中等 | [中等-138. 复制带随机指针的链表.md](链表/单链表/中等-138. 复制带随机指针的链表.md) |                                         |
+| [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/) | 中等 | [中等-24. 两两交换链表中的节点.md](链表/单链表/中等-24. 两两交换链表中的节点.md) | 三指针                                  |
+| [328. 奇偶链表](https://leetcode-cn.com/problems/odd-even-linked-list/) | 中等 | [中等-328. 奇偶链表.md](链表/单链表/中等-328. 奇偶链表.md)   | 双指针                                  |
+| [707. 设计链表](https://leetcode-cn.com/problems/design-linked-list/) | 中等 | [中等-707. 设计链表.md](链表/单链表/中等-707. 设计链表.md)   | 建立链表                                |
+| [109. 有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/) | 中等 | [中等-109. 有序链表转换二叉搜索树.md](链表/单链表/中等-109. 有序链表转换二叉搜索树.md) | 分治法（中序遍历）                      |
+| [430. 扁平化多级双向链表](https://leetcode-cn.com/problems/flatten-a-multilevel-doubly-linked-list/) | 中等 | [中等-430. 扁平化多级双向链表.md](链表/单链表/中等-430. 扁平化多级双向链表.md) |                                         |
+| [725. 分隔链表](https://leetcode-cn.com/problems/split-linked-list-in-parts/) | 中等 | [中等-725. 分隔链表.md](链表/单链表/中等-725. 分隔链表.md)   |                                         |
 
 
 
