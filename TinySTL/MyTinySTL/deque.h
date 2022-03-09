@@ -3,7 +3,7 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-03-05 18:58:33
+ * @LastEditTime: 2022-03-07 15:21:01
  */
 
 #ifndef MYTINYSTL_DEQUE_H_
@@ -77,7 +77,7 @@ namespace mystl {
         value_pointer cur;  //指向所在缓冲区的当前元素
         value_poinetr first; // 指向所在缓冲区的头部
         value_pointer last; // 指向所在缓冲区的尾部
-        map_pointer node;   // 缓冲区所在节点
+        map_pointer node;   // 缓冲区所在节点(指向map)
 
         // 构造、复制、移动函数
         deque_iterator() noexcept 
@@ -122,14 +122,14 @@ namespace mystl {
         pointer operator->() const  { return cur; }
 
         difference_type operator-(const self& x) const {
-            return static_cast<difference_type>(buffer_size) * (node - x.node)
-                + (cur - first) - (x.cur - x.first);        //TODO:
+            return static_cast<difference_type>(buffer_size) * (node - x.node - 1)
+                + (cur - first) + (x.last - x.cur);        //TODO:
         }
         
         // 前加加
         self& operator++() {
             ++ cur;
-            if (cur == last) {  // TODO: 这里是不是也应该放到++cur之前？
+            if (cur == last) {  
                 // 如果到达缓冲区的尾部
                 set_node(node + 1);
                 cur = first;
@@ -488,7 +488,7 @@ namespace mystl {
     create_buffer(map_pointer nstart, map_pointer nfinish) {
         map_pointer cur; 
         try {
-            for (cur = start; cur <= nfinish; ++cur) {
+            for (cur = nstart; cur <= nfinish; ++cur) {
                 *cur = data_allocator::allocate(buffer_size);
             }
         } catch (...) {
@@ -515,8 +515,8 @@ namespace mystl {
     template <class T>
     void deque<T>::
     map_init(size_type nElem) {
-        const size_type nNode = nElem / buffer_size + 1; // 需要分配的缓冲区个数 (1 是 需要空一个位置？TODO:??)
-        map_size_ = mystl::max(static_cast<size_type>(DEQUE_MAP_INIT_SIZE), nNode + 2); // TODO: ??这里的2
+        const size_type nNode = nElem / buffer_size + 1; // 需要分配的缓冲区个数 (1 是 多配置的一个节点)
+        map_size_ = mystl::max(static_cast<size_type>(DEQUE_MAP_INIT_SIZE), nNode + 2); // 这里的 2 是为了扩充预留的位置（前后各一个）
         tyr {
             map_ = create_map(map_size_);
         } catch (...) {
