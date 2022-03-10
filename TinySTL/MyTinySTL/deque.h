@@ -3,7 +3,7 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-03-07 15:21:01
+ * @LastEditTime: 2022-03-10 13:15:42
  */
 
 #ifndef MYTINYSTL_DEQUE_H_
@@ -74,10 +74,10 @@ namespace mystl {
         static const size_type buffer_size = deque_buf_size<T>::value;
 
         // 迭代器所含成员数据
-        value_pointer cur;  //指向所在缓冲区的当前元素
-        value_poinetr first; // 指向所在缓冲区的头部
-        value_pointer last; // 指向所在缓冲区的尾部
-        map_pointer node;   // 缓冲区所在节点(指向map)
+        value_pointer cur;      // 指向所在缓冲区的当前元素
+        value_pointer first;    // 指向所在缓冲区的头部
+        value_pointer last;     // 指向所在缓冲区的尾部
+        map_pointer node;       // 缓冲区所在节点(指向map)
 
         // 构造、复制、移动函数
         deque_iterator() noexcept 
@@ -196,7 +196,7 @@ namespace mystl {
             return node == cur.node ? (cur < rhs.cur) : (node < rhs.node);
         }
         bool operator!=(const self& rhs) const { return !(*this == rhs); }
-        bool operator>(const self& rhs) const { return rhs < *this ;}
+        bool operator>(const self& rhs)  const { return rhs < *this ; }
         bool operator<=(const self& rhs) const { return !(rhs < *this); }
         bool operator>=(const self& rhs) const { return !(*this < rhs); }
         };
@@ -331,7 +331,7 @@ namespace mystl {
         size_type  max_size()   const noexcept { return static_cast<size_type>(-1); }
         void       resize(size_type new_size)  { resize(new_size, value_type()); }
         void       resize(size_type new_size, const value_type& value);
-        void       shrink_tofit()   noexcept;
+        void       shrink_to_fit()   noexcept;
 
         // 访问元素相关操作
         reference       operator[](size_type n) {
@@ -467,6 +467,155 @@ namespace mystl {
         void            reallocate_map_at_back(size_type need);
 
     };
+    /**************************************************************************************/
+
+    // 复制赋值运算符
+    template <class T>
+    deque<T>& 
+    deque<T>::operator=(const deque& rhs) {
+        if (this != &rhs) { // rhs 不等于调用 赋值运算符 的对象(即不是同一个deque)
+            const auto len = size();
+            if (len >= rhs.size()) {    // deque对象的空间够用
+                erase(mystl::copy(rhs.begin_, rhs.end_, begin_), end_);
+            } else {                    // deque对象的空间不够用
+                iterator mid = rhs.begin() + static_cast<difference_type>(len);
+                mystl::copy(rhs.begin_, mid, begin_);
+                insert(end_, mid, rhs.end_);
+            }
+        } 
+        return *this;
+    }
+
+    // 移动赋值运算符
+    template <class T>
+    deque<T>&
+    deque<T>::operator=(deque&& rhs) {
+        clear();
+        begin_ = mystl::move(rhs.begin_);
+        end_ = mystl::move(rhs.end_);
+        map_ = rhs.map_;
+        map_size_ = rhs.map_size_;
+        rhs.map_ = nullptr;
+        rhs.map_size_ = 0;
+        return *this;
+    }
+
+    // 重置容器大小
+    template <class T>
+    void deque<T>::resize(size_type new_size, const value_type& value) {
+        const auto len = size();
+        if (new_size < len) {
+            erase(begin_ + new_size, end_);
+        } else {
+            insert(end_, new_size - len, value);
+        }
+    }
+
+    // 减小容器容量
+    template <class T>
+    void deque<T>::shrink_to_fit() noexcept {
+        // 至少会留下头部缓冲区
+        for (auto cur = map_; cur < begin_.node; ++cur) {
+            data_allocator::deallocate(*cur, buffer_size);
+            *cur = nullptr;
+        }
+        for (auto cur = end_.node + 1; cur < map_ + map_size_; ++cur) {
+            data_allocator::deallocate(*cur, buffer_size);
+            *cur = nullptr;
+        }
+    }
+
+    // 在头部就地构建元素
+    template <class T>
+    template <class ...Args>
+    void deque<T>::emplace_front(Args&& ...args) {
+        if (begin_.cur != begin_.first) {
+            data_allocator::construct(begin_.cur - 1, mystl::forward<Args>(args)...);
+            --begin_.cur;
+        } else {
+            require_capacity(1, true);  // true表示在头部, false表示尾部
+            try {
+                --begin_;
+                data_allocator::construct(begin_.cur, mystl::forward<Args>(args)...);
+            } catch (...) {
+                ++begin_;
+                throw;
+            }
+        }
+    }
+
+    // 在尾部就地构建元素
+    template <class T>
+    template <class ...Args>
+    void deque<T>::emplace_back(Args&& ..args) {
+        if (end_.cur != end_.last - 1) {
+            data_allocator::construct(end_.cur, mystl::forward<Args>(args)...);
+            ++end_.cur;
+        } else {
+            require_capacity(1, false);
+            data_allocator::construct(end_.cur, mystl::forward<Args>(args)...);
+            ++end_;
+        }
+    }
+
+    // 在 pos 位置上就地构建元素
+    template <class T>
+    template <class ...Args>
+    typename deque<T>::iterator deque<T>::emplace(iterator pos, Args&& ...args) {
+        if (pos.cur == begin_.cur) {
+            emplace_front(mystl::forward<Args>(args)...);
+            return begin_;
+        } else if (pos.cur == end_.cur) {
+            emplace_back(mystl::forward<Args>(args)...);
+            return end_ - 1;
+        } 
+        return insert_aux(pos, mystl::forward<Args>(args)...);
+    }
+
+    // 在头部插入元素
+    template <class T>
+    void deque<T>::push_front(const value_type& value) {
+        if (begin_.cur != begin_.first) {   // deque前面还有空间
+            data_allocator::construct(begin_.cur - 1, value);
+            --begin_.cur;
+        } else {                            // 没有了
+            require_capacity(1, true);
+            try {
+                -- begin_;
+                data_allocator::construct(begin_.cur, value);
+            } catch (...) {
+                ++begin_;
+                throw;
+            }
+        }
+    }
+
+    // 在尾部插入元素
+    template <class T>
+    void deque<T>::push_back(const value_type& value) {
+        if (end_.cur != end_.last - 1) {    // deque后面还有空间
+            data_allocator::construct(end_.cur, value);
+            ++end_.cur;
+        } else {                            // 没有了
+            require_capacity(1, false);     // fasle 表示在尾部申请空间
+            data_allocator::construct(end_.cur, value);
+            ++end_;
+        }
+    }
+
+    // 弹出头部元素
+    template <class T>
+    void deque<T>::pop_front() {
+        MYSTL_DEBUG(!empty());
+        if (begin_.cur != begin_.last - 1) {    // deque中存在元素
+            data_allocator::destroy(begin_.cur);
+            ++ begin_.cur;
+        } else {
+            --end_;
+            data_allocator::destroy(end_.cur);
+            destroy_buffer(end_.node + 1, end_.node + 1);
+        }
+    }
 
     /**************************************************************************************/
     // helper function 
