@@ -3,7 +3,7 @@
  * @Author: yufeng
  * @GitHub: https://github.com/fzhiy
  * @Email: fzhiy270@163.com
- * @LastEditTime: 2022-02-23 20:45:27
+ * @LastEditTime: 2022-03-11 12:52:07
  */
 
 #include <iostream>
@@ -181,6 +181,8 @@ int SkipList<K, V>::insert_element(const K key, const V value) {
 
     // reached level 0 and forward pointer to right node, which is desired to insert key.
     current = current->forward[0];
+    if (current != NULL)
+        std::cout << "current->get_key() : " << current->get_key() << std::endl;
 
     // if current node have key equal to searched key, we get it
     if (current != NULL && current->get_key() == key) {
@@ -195,7 +197,7 @@ int SkipList<K, V>::insert_element(const K key, const V value) {
 
         // Generate a random level for node
         int random_level = get_random_level();
-
+        std::cout << random_level << " " << _max_level << std::endl;
         // If random level is greater than skiplist's current level, initialize update value with pointer to header
         if (random_level > _skip_list_level) {
             for (int i = _skip_list_level+1; i < random_level+1; i++) {
@@ -380,6 +382,7 @@ bool SkipList<K, V>::search_element(K key) {
     // start from highest level of skip list
     for (int i=_skip_list_level; i>=0; i--) {
         while (current->forward[i] && current->forward[i]->get_key() < key) {
+            std::cout << "当前节点的key: " << current->forward[i]->get_key() << std::endl;
             current = current->forward[i];
         }
     }
