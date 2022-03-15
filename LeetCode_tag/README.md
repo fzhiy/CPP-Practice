@@ -63,13 +63,17 @@
 
 ## 双指针与滑动窗口
 
-| 题目                                                         | 难度 | 题解文件                                                     | 方法   |
-| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ------ |
-| [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/) | 简单 | [387. 字符串中的第一个唯一字符.md](双指针与滑动窗口/387. 字符串中的第一个唯一字符.md) | 计数   |
-| [349. 两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/) | 简单 | [349. 两个数组的交集.md](双指针与滑动窗口/349. 两个数组的交集.md) | 哈希表 |
-| [409. 最长回文串](https://leetcode-cn.com/problems/longest-palindrome/) | 简单 | [409. 最长回文串.md](双指针与滑动窗口/409. 最长回文串.md)    |        |
-| [217. 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/) | 简单 | [217. 存在重复元素.md](双指针与滑动窗口/217. 存在重复元素.md) | 哈希表 |
-|                                                              |      |                                                              |        |
+| 题目                                                         | 难度 | 题解文件                                                     | 方法           |
+| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | -------------- |
+| [387. 字符串中的第一个唯一字符](https://leetcode-cn.com/problems/first-unique-character-in-a-string/) | 简单 | [387. 字符串中的第一个唯一字符.md](双指针与滑动窗口/387. 字符串中的第一个唯一字符.md) | 计数           |
+| [349. 两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/) | 简单 | [349. 两个数组的交集.md](双指针与滑动窗口/349. 两个数组的交集.md) | 哈希表         |
+| [409. 最长回文串](https://leetcode-cn.com/problems/longest-palindrome/) | 简单 | [409. 最长回文串.md](双指针与滑动窗口/409. 最长回文串.md)    | （哈希表）计数 |
+| [217. 存在重复元素](https://leetcode-cn.com/problems/contains-duplicate/) | 简单 | [217. 存在重复元素.md](双指针与滑动窗口/217. 存在重复元素.md) | 哈希表         |
+| [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/) | 简单 | [88. 合并两个有序数组.md](双指针与滑动窗口/88. 合并两个有序数组.md) | 逆双指针       |
+| [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/) | 简单 | [283. 移动零.md](双指针与滑动窗口/283. 移动零.md)            | 双指针         |
+| [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/) | 简单 | [125. 验证回文串.md](双指针与滑动窗口/125. 验证回文串.md)    | 双指针         |
+| [3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | 中等 | [3. 无重复字符的最长子串.md](双指针与滑动窗口/3. 无重复字符的最长子串.md) |                |
+|                                                              |      |                                                              |                |
 
 
 
