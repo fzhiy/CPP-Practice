@@ -72,7 +72,13 @@
 | [88. 合并两个有序数组](https://leetcode-cn.com/problems/merge-sorted-array/) | 简单 | [88. 合并两个有序数组.md](双指针与滑动窗口/88. 合并两个有序数组.md) | 逆双指针       |
 | [283. 移动零](https://leetcode-cn.com/problems/move-zeroes/) | 简单 | [283. 移动零.md](双指针与滑动窗口/283. 移动零.md)            | 双指针         |
 | [125. 验证回文串](https://leetcode-cn.com/problems/valid-palindrome/) | 简单 | [125. 验证回文串.md](双指针与滑动窗口/125. 验证回文串.md)    | 双指针         |
-| [3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | 中等 | [3. 无重复字符的最长子串.md](双指针与滑动窗口/3. 无重复字符的最长子串.md) |                |
+| [344. 反转字符串](https://leetcode-cn.com/problems/reverse-string/) | 简单 | [344. 反转字符串.md](双指针与滑动窗口/344. 反转字符串.md)    | 双指针         |
+| [27. 移除元素](https://leetcode-cn.com/problems/remove-element/) | 简单 | [27. 移除元素.md](双指针与滑动窗口/27. 移除元素.md)          | 双指针         |
+| [977. 有序数组的平方](https://leetcode-cn.com/problems/squares-of-a-sorted-array/) | 简单 | [977. 有序数组的平方.md](双指针与滑动窗口/977. 有序数组的平方.md) | 双指针         |
+| [3. 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | 中等 | [3. 无重复字符的最长子串.md](双指针与滑动窗口/3. 无重复字符的最长子串.md) | 滑动窗口       |
+| [781. 森林中的兔子](https://leetcode-cn.com/problems/rabbits-in-forest/) | 中等 | [781. 森林中的兔子.md](双指针与滑动窗口/781. 森林中的兔子.md) | 哈希表         |
+| [49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/) | 中等 | [49. 字母异位词分组.md](双指针与滑动窗口/49. 字母异位词分组.md) |                |
+| [18. 四数之和](https://leetcode-cn.com/problems/4sum/)       | 中等 | [18. 四数之和.md](双指针与滑动窗口/18. 四数之和.md)          | 排序+双指针    |
 |                                                              |      |                                                              |                |
 
 
