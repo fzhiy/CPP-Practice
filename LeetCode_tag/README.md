@@ -59,6 +59,15 @@
 
 ## 位运算
 
+| 题目                                                         | 难度 | 题解文件                                                    | 方法             |
+| ------------------------------------------------------------ | ---- | ----------------------------------------------------------- | ---------------- |
+| [136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/) | 简单 | [136. 只出现一次的数字.md](位运算/136. 只出现一次的数字.md) | 位异或           |
+| [191. 位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/) | 简单 | [191. 位1的个数.md](位运算/191. 位1的个数.md)               | 位运算           |
+| [169. 多数元素](https://leetcode-cn.com/problems/majority-element/) | 简单 | [169. 多数元素.md](位运算/169. 多数元素.md)                 | Boyer-Moore 算法 |
+| [231. 2 的幂](https://leetcode-cn.com/problems/power-of-two/) | 简单 | [231. 2 的幂.md](位运算/231. 2 的幂.md)                     | 位运算           |
+| [389. 找不同](https://leetcode-cn.com/problems/find-the-difference/) | 简单 | [389. 找不同.md](位运算/389. 找不同.md)                     | 位运算，问题转化 |
+|                                                              |      |                                                             |                  |
+
 
 
 ## 双指针与滑动窗口
