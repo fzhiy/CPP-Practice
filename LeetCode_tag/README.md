@@ -38,6 +38,9 @@
 | [109. 有序链表转换二叉搜索树](https://leetcode-cn.com/problems/convert-sorted-list-to-binary-search-tree/) | 中等 | [中等-109. 有序链表转换二叉搜索树.md](链表/单链表/中等-109. 有序链表转换二叉搜索树.md) | 分治法（中序遍历）                      |
 | [430. 扁平化多级双向链表](https://leetcode-cn.com/problems/flatten-a-multilevel-doubly-linked-list/) | 中等 | [中等-430. 扁平化多级双向链表.md](链表/单链表/中等-430. 扁平化多级双向链表.md) |                                         |
 | [725. 分隔链表](https://leetcode-cn.com/problems/split-linked-list-in-parts/) | 中等 | [中等-725. 分隔链表.md](链表/单链表/中等-725. 分隔链表.md)   |                                         |
+|                                                              |      |                                                              |                                         |
+|                                                              |      |                                                              |                                         |
+|                                                              |      |                                                              |                                         |
 
 
 
@@ -46,6 +49,17 @@
 
 
 ## 动态规划
+
+| 题目                                                         | 难度 | 题解文件                                                     | 方法       |
+| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ---------- |
+| [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/) | 简单 | [70. 爬楼梯.md](动态规划\一维\70. 爬楼梯.md)                 |            |
+| [53. 最大子数组和](https://leetcode-cn.com/problems/maximum-subarray/) | 简单 | [53. 最大子数组和.md](动态规划\一维\53. 最大子数组和.md)     | DP, 分治法 |
+| [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/) | 简单 | [121. 买卖股票的最佳时机.md](动态规划\一维\121. 买卖股票的最佳时机.md) | DP         |
+| [746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/) | 简单 | [746. 使用最小花费爬楼梯.md](动态规划\一维\746. 使用最小花费爬楼梯.md) | DP         |
+| [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/) | 中等 | [337. 打家劫舍 III.md](动态规划\一维\337. 打家劫舍 III.md)   | DP(dfs)    |
+| [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/) | 中等 | [322. 零钱兑换.md](动态规划\一维\322. 零钱兑换.md)           | 完全背包   |
+| [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/) | 中等 | [300. 最长递增子序列.md](动态规划\一维\300. 最长递增子序列.md) |            |
+|                                                              |      |                                                              |            |
 
 
 
@@ -59,14 +73,18 @@
 
 ## 位运算
 
-| 题目                                                         | 难度 | 题解文件                                                    | 方法             |
-| ------------------------------------------------------------ | ---- | ----------------------------------------------------------- | ---------------- |
-| [136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/) | 简单 | [136. 只出现一次的数字.md](位运算/136. 只出现一次的数字.md) | 位异或           |
-| [191. 位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/) | 简单 | [191. 位1的个数.md](位运算/191. 位1的个数.md)               | 位运算           |
-| [169. 多数元素](https://leetcode-cn.com/problems/majority-element/) | 简单 | [169. 多数元素.md](位运算/169. 多数元素.md)                 | Boyer-Moore 算法 |
-| [231. 2 的幂](https://leetcode-cn.com/problems/power-of-two/) | 简单 | [231. 2 的幂.md](位运算/231. 2 的幂.md)                     | 位运算           |
-| [389. 找不同](https://leetcode-cn.com/problems/find-the-difference/) | 简单 | [389. 找不同.md](位运算/389. 找不同.md)                     | 位运算，问题转化 |
-|                                                              |      |                                                             |                  |
+| 题目                                                         | 难度 | 题解文件                                                     | 方法             |
+| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ---------------- |
+| [136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/) | 简单 | [136. 只出现一次的数字.md](位运算/136. 只出现一次的数字.md)  | 位异或           |
+| [191. 位1的个数](https://leetcode-cn.com/problems/number-of-1-bits/) | 简单 | [191. 位1的个数.md](位运算/191. 位1的个数.md)                | 位运算           |
+| [169. 多数元素](https://leetcode-cn.com/problems/majority-element/) | 简单 | [169. 多数元素.md](位运算/169. 多数元素.md)                  | Boyer-Moore 算法 |
+| [231. 2 的幂](https://leetcode-cn.com/problems/power-of-two/) | 简单 | [231. 2 的幂.md](位运算/231. 2 的幂.md)                      | 位运算           |
+| [389. 找不同](https://leetcode-cn.com/problems/find-the-difference/) | 简单 | [389. 找不同.md](位运算/389. 找不同.md)                      | 位运算，问题转化 |
+| [268. 丢失的数字](https://leetcode-cn.com/problems/missing-number/) | 简单 | [268. 丢失的数字.md](位运算/268. 丢失的数字.md)              | 位运算           |
+| [190. 颠倒二进制位](https://leetcode-cn.com/problems/reverse-bits/) | 简单 | [190. 颠倒二进制位.md](位运算/190. 颠倒二进制位.md)          | 位运算           |
+| [461. 汉明距离](https://leetcode-cn.com/problems/hamming-distance/) | 简单 | [461. 汉明距离.md](位运算/461. 汉明距离.md)                  | 位运算           |
+| [405. 数字转换为十六进制数](https://leetcode-cn.com/problems/convert-a-number-to-hexadecimal/) | 简单 | [405. 数字转换为十六进制数.md](位运算/405. 数字转换为十六进制数.md) | 位运算           |
+|                                                              |      |                                                              |                  |
 
 
 
