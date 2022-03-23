@@ -50,16 +50,26 @@
 
 ## 动态规划
 
-| 题目                                                         | 难度 | 题解文件                                                     | 方法       |
-| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ---------- |
-| [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/) | 简单 | [70. 爬楼梯.md](动态规划\一维\70. 爬楼梯.md)                 |            |
-| [53. 最大子数组和](https://leetcode-cn.com/problems/maximum-subarray/) | 简单 | [53. 最大子数组和.md](动态规划\一维\53. 最大子数组和.md)     | DP, 分治法 |
-| [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/) | 简单 | [121. 买卖股票的最佳时机.md](动态规划\一维\121. 买卖股票的最佳时机.md) | DP         |
-| [746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/) | 简单 | [746. 使用最小花费爬楼梯.md](动态规划\一维\746. 使用最小花费爬楼梯.md) | DP         |
-| [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/) | 中等 | [337. 打家劫舍 III.md](动态规划\一维\337. 打家劫舍 III.md)   | DP(dfs)    |
-| [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/) | 中等 | [322. 零钱兑换.md](动态规划\一维\322. 零钱兑换.md)           | 完全背包   |
-| [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/) | 中等 | [300. 最长递增子序列.md](动态规划\一维\300. 最长递增子序列.md) |            |
-|                                                              |      |                                                              |            |
+| 题目                                                         | 难度 | 题解文件                                                     | 方法              |
+| ------------------------------------------------------------ | ---- | ------------------------------------------------------------ | ----------------- |
+| [70. 爬楼梯](https://leetcode-cn.com/problems/climbing-stairs/) | 简单 | [70. 爬楼梯.md](动态规划\一维\70. 爬楼梯.md)                 |                   |
+| [53. 最大子数组和](https://leetcode-cn.com/problems/maximum-subarray/) | 简单 | [53. 最大子数组和.md](动态规划\一维\53. 最大子数组和.md)     | DP, 分治法        |
+| [121. 买卖股票的最佳时机](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/) | 简单 | [121. 买卖股票的最佳时机.md](动态规划\一维\121. 买卖股票的最佳时机.md) | DP                |
+| [746. 使用最小花费爬楼梯](https://leetcode-cn.com/problems/min-cost-climbing-stairs/) | 简单 | [746. 使用最小花费爬楼梯.md](动态规划\一维\746. 使用最小花费爬楼梯.md) | DP                |
+| [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/) | 中等 | [337. 打家劫舍 III.md](动态规划\一维\337. 打家劫舍 III.md)   | DP(dfs)           |
+| [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/) | 中等 | [322. 零钱兑换.md](动态规划\一维\322. 零钱兑换.md)           | 完全背包          |
+| [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/) | 中等 | [300. 最长递增子序列.md](动态规划\一维\300. 最长递增子序列.md) | DP / DP+二分      |
+|                                                              |      |                                                              |                   |
+|                                                              |      |                                                              |                   |
+| [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | 中等 | [5. 最长回文子串.md](动态规划\二维\5. 最长回文子串.md)       |                   |
+| [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/) | 中等 | [1143. 最长公共子序列.md](动态规划\二维\1143. 最长公共子序列.md) | 经典二维DP        |
+| [131. 分割回文串](https://leetcode-cn.com/problems/palindrome-partitioning/) | 中等 | [131. 分割回文串.md](动态规划\二维\131. 分割回文串.md)       |                   |
+| [62. 不同路径](https://leetcode-cn.com/problems/unique-paths/) | 中等 | [62. 不同路径.md](动态规划\二维\62. 不同路径.md)             | 二维DP / 滚动数组 |
+| [63. 不同路径 II](https://leetcode-cn.com/problems/unique-paths-ii/) | 中等 | [63. 不同路径 II.md](动态规划\二维\63. 不同路径 II.md)       | 二维DP            |
+| [64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/) | 中等 | [64. 最小路径和.md](动态规划\二维\64. 最小路径和.md)         | 二维DP / 滚动数组 |
+| [718. 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/) | 中等 | [718. 最长重复子数组.md](动态规划\二维\718. 最长重复子数组.md) | 二维DP / 滚动数组 |
+| [221. 最大正方形](https://leetcode-cn.com/problems/maximal-square/) | 中等 | [221. 最大正方形.md](动态规划\二维\221. 最大正方形.md)       | 二维DP            |
+|                                                              |      |                                                              |                   |
 
 
 
