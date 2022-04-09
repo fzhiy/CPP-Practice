@@ -59,9 +59,9 @@
 | [337. 打家劫舍 III](https://leetcode-cn.com/problems/house-robber-iii/) | 中等 | [337. 打家劫舍 III.md](动态规划\一维\337. 打家劫舍 III.md)   | DP(dfs)           |
 | [322. 零钱兑换](https://leetcode-cn.com/problems/coin-change/) | 中等 | [322. 零钱兑换.md](动态规划\一维\322. 零钱兑换.md)           | 完全背包          |
 | [300. 最长递增子序列](https://leetcode-cn.com/problems/longest-increasing-subsequence/) | 中等 | [300. 最长递增子序列.md](动态规划\一维\300. 最长递增子序列.md) | DP / DP+二分      |
+| [139. 单词拆分](https://leetcode-cn.com/problems/word-break/) | 中等 | [139. 单词拆分.md](动态规划\一维\139. 单词拆分.md)           | DP                |
 |                                                              |      |                                                              |                   |
-|                                                              |      |                                                              |                   |
-| [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | 中等 | [5. 最长回文子串.md](动态规划\二维\5. 最长回文子串.md)       |                   |
+| [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | 中等 | [5. 最长回文子串.md](动态规划\二维\5. 最长回文子串.md)       | DP/中心扩展法     |
 | [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/) | 中等 | [1143. 最长公共子序列.md](动态规划\二维\1143. 最长公共子序列.md) | 经典二维DP        |
 | [131. 分割回文串](https://leetcode-cn.com/problems/palindrome-partitioning/) | 中等 | [131. 分割回文串.md](动态规划\二维\131. 分割回文串.md)       |                   |
 | [62. 不同路径](https://leetcode-cn.com/problems/unique-paths/) | 中等 | [62. 不同路径.md](动态规划\二维\62. 不同路径.md)             | 二维DP / 滚动数组 |
