@@ -33,3 +33,6 @@
 
 # CPP_test Directory
 CPP_test
+
+# redis source code directory
+redis
