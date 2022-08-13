@@ -116,9 +116,9 @@
 | [781. 森林中的兔子](https://leetcode-cn.com/problems/rabbits-in-forest/) | 中等 | [781. 森林中的兔子.md](双指针与滑动窗口/781. 森林中的兔子.md) | 哈希表         |
 | [49. 字母异位词分组](https://leetcode-cn.com/problems/group-anagrams/) | 中等 | [49. 字母异位词分组.md](双指针与滑动窗口/49. 字母异位词分组.md) |                |
 | [18. 四数之和](https://leetcode-cn.com/problems/4sum/)       | 中等 | [18. 四数之和.md](双指针与滑动窗口/18. 四数之和.md)          | 排序+双指针    |
+| [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/) | 中等 | [11. 盛最多水的容器.md](双指针与滑动窗口/11. 盛最多水的容器.md) | 双指针         |
+| [16. 最接近的三数之和](https://leetcode.cn/problems/3sum-closest/) | 中等 | [16. 最接近的三数之和.md](双指针与滑动窗口/16. 最接近的三数之和.md) | 排序+双指针    |
 |                                                              |      |                                                              |                |
-
-
 
 ## 二叉搜索树
 
