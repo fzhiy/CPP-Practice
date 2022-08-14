@@ -118,6 +118,9 @@
 | [18. 四数之和](https://leetcode-cn.com/problems/4sum/)       | 中等 | [18. 四数之和.md](双指针与滑动窗口/18. 四数之和.md)          | 排序+双指针    |
 | [11. 盛最多水的容器](https://leetcode.cn/problems/container-with-most-water/) | 中等 | [11. 盛最多水的容器.md](双指针与滑动窗口/11. 盛最多水的容器.md) | 双指针         |
 | [16. 最接近的三数之和](https://leetcode.cn/problems/3sum-closest/) | 中等 | [16. 最接近的三数之和.md](双指针与滑动窗口/16. 最接近的三数之和.md) | 排序+双指针    |
+| [424. 替换后的最长重复字符](https://leetcode.cn/problems/longest-repeating-character-replacement/) | 中等 | [424. 替换后的最长重复字符.md](双指针与滑动窗口\424. 替换后的最长重复字符.md) | 双指针         |
+| [713. 乘积小于 K 的子数组](https://leetcode.cn/problems/subarray-product-less-than-k/) | 中等 | [713. 乘积小于 K 的子数组.md](双指针与滑动窗口\713. 乘积小于 K 的子数组.md) | 双指针         |
+| [992. K 个不同整数的子数组](https://leetcode.cn/problems/subarrays-with-k-different-integers/) | 困难 | [992. K 个不同整数的子数组.md](双指针与滑动窗口\992. K 个不同整数的子数组.md) | 双指针         |
 |                                                              |      |                                                              |                |
 
 ## 二叉搜索树
