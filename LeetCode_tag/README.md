@@ -121,7 +121,7 @@
 | [424. 替换后的最长重复字符](https://leetcode.cn/problems/longest-repeating-character-replacement/) | 中等 | [424. 替换后的最长重复字符.md](双指针与滑动窗口\424. 替换后的最长重复字符.md) | 双指针         |
 | [713. 乘积小于 K 的子数组](https://leetcode.cn/problems/subarray-product-less-than-k/) | 中等 | [713. 乘积小于 K 的子数组.md](双指针与滑动窗口\713. 乘积小于 K 的子数组.md) | 双指针         |
 | [992. K 个不同整数的子数组](https://leetcode.cn/problems/subarrays-with-k-different-integers/) | 困难 | [992. K 个不同整数的子数组.md](双指针与滑动窗口\992. K 个不同整数的子数组.md) | 双指针         |
-|                                                              |      |                                                              |                |
+| [76. 最小覆盖子串](https://leetcode.cn/problems/minimum-window-substring/) | 困难 |                                                              |                |
 
 ## 二叉搜索树
 
