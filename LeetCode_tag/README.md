@@ -69,7 +69,7 @@
 | [64. 最小路径和](https://leetcode-cn.com/problems/minimum-path-sum/) | 中等 | [64. 最小路径和.md](动态规划\二维\64. 最小路径和.md)         | 二维DP / 滚动数组 |
 | [718. 最长重复子数组](https://leetcode-cn.com/problems/maximum-length-of-repeated-subarray/) | 中等 | [718. 最长重复子数组.md](动态规划\二维\718. 最长重复子数组.md) | 二维DP / 滚动数组 |
 | [221. 最大正方形](https://leetcode-cn.com/problems/maximal-square/) | 中等 | [221. 最大正方形.md](动态规划\二维\221. 最大正方形.md)       | 二维DP            |
-| [416. 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/) | 中等 | [416. 分割等和子集.md](动态规划\416. 分割等和子集.md)        | 二维DP => 一维    |
+| [416. 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/) | 中等 | [416. 分割等和子集.md](动态规划\二维\416. 分割等和子集.md)   | 二维DP => 一维    |
 |                                                              |      |                                                              |                   |
 
 
