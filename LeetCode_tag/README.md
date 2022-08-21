@@ -72,6 +72,8 @@
 | [416. 分割等和子集](https://leetcode.cn/problems/partition-equal-subset-sum/) | 中等 | [416. 分割等和子集.md](动态规划\二维\416. 分割等和子集.md)   | 二维DP => 一维    |
 | [494. 目标和](https://leetcode.cn/problems/target-sum/)      | 中等 | [494. 目标和.md](动态规划\二维\494. 目标和.md)               | 递归 / DP         |
 |                                                              |      |                                                              |                   |
+| [72. 编辑距离](https://leetcode.cn/problems/edit-distance/)  | 困难 | [72. 编辑距离.md](动态规划\二维\72. 编辑距离.md)             | DP                |
+|                                                              |      |                                                              |                   |
 
 
 
