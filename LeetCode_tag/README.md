@@ -62,6 +62,7 @@
 | [139. 单词拆分](https://leetcode-cn.com/problems/word-break/) | 中等 | [139. 单词拆分.md](动态规划\一维\139. 单词拆分.md)           | DP                   |
 | [279. 完全平方数](https://leetcode.cn/problems/perfect-squares/) | 中等 | [279. 完全平方数.md](动态规划\二维\279. 完全平方数.md)       | 完全背包（可找规律） |
 | [338. 比特位计数](https://leetcode.cn/problems/counting-bits/) | 简单 | [338. 比特位计数.md](动态规划\一维\338. 比特位计数.md)       | 位运算 + DP          |
+| [264. 丑数 II](https://leetcode.cn/problems/ugly-number-ii/) | 中等 | [264. 丑数 II.md](动态规划\一维\264. 丑数 II.md)             | 三指针               |
 |                                                              |      |                                                              |                      |
 | [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | 中等 | [5. 最长回文子串.md](动态规划\二维\5. 最长回文子串.md)       | DP/中心扩展法        |
 | [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/) | 中等 | [1143. 最长公共子序列.md](动态规划\二维\1143. 最长公共子序列.md) | 经典二维DP           |
