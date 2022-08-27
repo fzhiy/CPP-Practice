@@ -68,6 +68,7 @@
 | [309. 最佳买卖股票时机含冷冻期](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-with-cooldown/) | 中等 | [309. 最佳买卖股票时机含冷冻期.md](动态规划\一维\309. 最佳买卖股票时机含冷冻期.md) | DP                   |
 | [123. 买卖股票的最佳时机 III](https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii/) | 困难 | [123. 买卖股票的最佳时机 III.md](动态规划\一维\123. 买卖股票的最佳时机 III.md) | DP                   |
 | [354. 俄罗斯套娃信封问题](https://leetcode.cn/problems/russian-doll-envelopes/) | 困难 | [354. 俄罗斯套娃信封问题.md](动态规划\一维\354. 俄罗斯套娃信封问题.md) | DP                   |
+| [32. 最长有效括号](https://leetcode.cn/problems/longest-valid-parentheses/) | 困难 | [32. 最长有效括号.md](动态规划\一维\32. 最长有效括号.md)     | 栈                   |
 |                                                              |      |                                                              |                      |
 | [5. 最长回文子串](https://leetcode-cn.com/problems/longest-palindromic-substring/) | 中等 | [5. 最长回文子串.md](动态规划\二维\5. 最长回文子串.md)       | DP/中心扩展法        |
 | [1143. 最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/) | 中等 | [1143. 最长公共子序列.md](动态规划\二维\1143. 最长公共子序列.md) | 经典二维DP           |
