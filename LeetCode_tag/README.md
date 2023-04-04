@@ -94,6 +94,7 @@
 | [703. 数据流中的第 K 大元素](https://leetcode.cn/problems/kth-largest-element-in-a-stream/) | 简单 | [703. 数据流中的第 K 大元素.md](堆\703. 数据流中的第 K 大元素.md) | 最小堆 |
 | [215. 数组中的第K个最大元素](https://leetcode.cn/problems/kth-largest-element-in-an-array/) | 中等 | [215. 数组中的第K个最大元素.md](堆\215. 数组中的第K个最大元素.md) | 最小堆 |
 | [347. 前 K 个高频元素](https://leetcode.cn/problems/top-k-frequent-elements/) | 中等 | [347. 前 K 个高频元素.md](堆\347. 前 K 个高频元素.md)        | 最小堆 |
+| [692. 前K个高频单词](https://leetcode.cn/problems/top-k-frequent-words/) | 中等 | [692. 前K个高频单词.md](堆\692. 前K个高频单词.md)            | 最小堆 |
 |                                                              |      |                                                              |        |
 
 
